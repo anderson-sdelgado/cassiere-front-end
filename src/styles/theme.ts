@@ -11,12 +11,14 @@ export default {
     secondary: '#3CD3C1',
     mainBg: '#06092B',
     lightBg: '#F2F2F2',
-    white: '#FAFAFA',
+    white: '#FFFFFF',
     black: '#030517',
-    lightGray: '#EAEAEA',
+    lightGray: '#fcfcfc',
     gray: '#8F8F8F',
     darkGray: '#2E2F42',
-    red: '#FF6347',
+    purple: '#9556BF',
+    normalBlue: '#4811BF',
+    lightPurple: '#daa1ff',
   },
   font: {
     family: {
@@ -26,7 +28,8 @@ export default {
     normal: 400,
     bold: 600,
     sizes: {
-      xsmall: '0.8rem',
+      xxsmall: '0.8rem',
+      xsmall: '1.2rem',
       small: '1.6rem',
       medium: '2.4rem',
       large: '3.2rem',
@@ -37,6 +40,7 @@ export default {
     },
   },
   spacings: {
+    xxsmall: '0.4rem',
     xsmall: '0.8rem',
     small: '1.6rem',
     medium: '2.4rem',

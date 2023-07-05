@@ -3,12 +3,16 @@ import { renderTheme } from '../../utils/render-theme';
 import Home, { HomeTemplateProps } from '.';
 
 const props: HomeTemplateProps = {
-  children: 'any',
+  urlLogo: 'img/logo.jpg',
+  altLogo: 'Logo',
 };
 
 describe('<Home />', () => {
   it('should render', () => {
     renderTheme(<Home {...props} />);
-    expect(screen.getByText('any')).toBeInTheDocument();
+    expect(screen.getByRole('img', { name: /logo/i })).toHaveAttribute(
+      'src',
+      props.urlLogo,
+    );
   });
 });

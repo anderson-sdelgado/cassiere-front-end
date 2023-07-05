@@ -1,3 +1,4 @@
+import { Container } from '../../components/Container';
 import Header from '../../components/Header';
 import * as Styled from './styles';
 
@@ -6,10 +7,12 @@ export type HomeTemplateProps = {
   altLogo: string;
 };
 
-const Home = ({ urlLogo, altLogo }: HomeTemplateProps) => {
+const Home = () => {
   return (
     <Styled.Wrapper>
-      <Header url={urlLogo} alt={altLogo} />
+      <Container>
+        <Header />
+      </Container>
     </Styled.Wrapper>
   );
 };

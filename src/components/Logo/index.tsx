@@ -1,11 +1,11 @@
 import * as Styled from './styles';
 
 export type LogoProps = {
-  url: string;
-  alt: string;
+  url?: string;
+  alt?: string;
 };
 
-const Logo = ({ url, alt }: LogoProps) => {
+const Logo = ({ url = 'img/logo.jpg', alt = 'Logo' }: LogoProps) => {
   return (
     <Styled.Wrapper>
       <img src={url} alt={alt} aria-label={alt} />

@@ -6,8 +6,8 @@ export const Wrapper = styled.div`
   height: 6rem;
 
   ${media.greaterThan('medium')`
-    width: 10rem;
-    height: 10rem;
+    width: 12rem;
+    height: 12rem;
   `}
 
   & > img {

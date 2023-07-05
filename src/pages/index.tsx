@@ -7,7 +7,8 @@ export default function Index(props: HomeTemplateProps) {
 export async function getStaticProps() {
   return {
     props: {
-      children: 'React',
+      url: 'img/logo.jpg',
+      alt: 'Logo',
     },
   };
 }
