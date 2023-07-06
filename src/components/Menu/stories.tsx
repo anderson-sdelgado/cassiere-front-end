@@ -1,24 +1,18 @@
 import { StoryFn, Meta } from '@storybook/react';
-import Menu, { MenuProps } from '.';
+import Menu from '.';
 
 export default {
   title: 'Menu',
   component: Menu,
-  args: {
-    children: `Menu`,
-  },
-  argTypes: {
-    children: { type: 'string' },
-  },
   parameters: {
     layout: 'fullscreen',
   },
-} as Meta<MenuProps>;
+} as Meta;
 
-export const Default: StoryFn<MenuProps> = (args) => {
+export const Default: StoryFn = () => {
   return (
     <div>
-      <Menu {...args} />
+      <Menu />
     </div>
   );
 };

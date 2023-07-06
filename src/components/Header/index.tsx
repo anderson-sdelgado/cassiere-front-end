@@ -11,6 +11,8 @@ import Logo from '../Logo';
 import MediaMatch from '../MediaMatch';
 import OptionHeader from '../OptionHeader';
 import Menu from '../Menu';
+import { Divider } from '../Divider';
+import { Container } from '../Container';
 
 export type HeaderProps = {
   url: string;
@@ -21,43 +23,45 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <Styled.Wrapper>
-      <Styled.HeardWrapper>
-        <Styled.HeaderMobile>
-          <MediaMatch lessThan="medium">
-            <Styled.IconWrapper onClick={() => setIsOpen(true)}>
-              <MenuIcon aria-label="Open Menu" />
-            </Styled.IconWrapper>
+      <Container>
+        <Styled.HeardWrapper>
+          <Styled.HeaderMobile>
+            <MediaMatch lessThan="medium">
+              <Styled.IconWrapper onClick={() => setIsOpen(true)}>
+                <MenuIcon aria-label="Open Menu" />
+              </Styled.IconWrapper>
+            </MediaMatch>
+            <Logo />
+            <MediaMatch lessThan="medium">
+              <Styled.IconWrapper>
+                <ShoppingCartIcon aria-label="Cart" />
+              </Styled.IconWrapper>
+            </MediaMatch>
+          </Styled.HeaderMobile>
+          <Styled.FindWrapper>
+            <form>
+              <input
+                type="text"
+                id="find"
+                name="find"
+                placeholder="Digite aqui o que você procura"
+              />
+              <img src="img/find.png" />
+            </form>
+          </Styled.FindWrapper>
+          <MediaMatch greaterThan="medium">
+            <Styled.Options>
+              <OptionHeader icon={<CallIcon />} text="Central de Atendimento" />
+              <OptionHeader icon={<PersonIcon />} text="Entre ou Cadastra-se" />
+              <OptionHeader
+                icon={<ShoppingCartIcon />}
+                hasArrow={false}
+                text="Meu Carrinho"
+              />
+            </Styled.Options>
           </MediaMatch>
-          <Logo />
-          <MediaMatch lessThan="medium">
-            <Styled.IconWrapper>
-              <ShoppingCartIcon aria-label="Cart" />
-            </Styled.IconWrapper>
-          </MediaMatch>
-        </Styled.HeaderMobile>
-        <Styled.FindWrapper>
-          <form>
-            <input
-              type="text"
-              id="find"
-              name="find"
-              placeholder="Digite aqui o que você procura"
-            />
-            <img src="img/find.png" />
-          </form>
-        </Styled.FindWrapper>
-        <MediaMatch greaterThan="medium">
-          <Styled.Options>
-            <OptionHeader icon={<CallIcon />} text="Central de Atendimento" />
-            <OptionHeader icon={<PersonIcon />} text="Entre ou Cadastra-se" />
-            <OptionHeader
-              icon={<ShoppingCartIcon />}
-              hasArrow={false}
-              text="Meu Carrinho"
-            />
-          </Styled.Options>
-        </MediaMatch>
-      </Styled.HeardWrapper>
+        </Styled.HeardWrapper>
+      </Container>
       <Styled.MenuWrapper isOpen={isOpen}>
         <Styled.HeaderMenu>
           <Styled.IconWrapper onClick={() => setIsOpen(false)}>
@@ -65,7 +69,9 @@ const Header = () => {
           </Styled.IconWrapper>
           <Logo />
         </Styled.HeaderMenu>
-        <Menu isOpen={isOpen} />
+        <Container>
+          <Menu />
+        </Container>
       </Styled.MenuWrapper>
     </Styled.Wrapper>
   );

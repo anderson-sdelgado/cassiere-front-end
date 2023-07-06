@@ -99,6 +99,14 @@ export const MenuWrapper = styled.div<MenuProps>`
         justify-self: center;
       }
     `}
+
+    ${media.greaterThan('medium')`
+      margin-top: ${theme.spacings.xsmall};
+      border-top: 0.1rem solid ${theme.colors.outline};
+      border-bottom: 0.1rem solid ${theme.colors.outline};
+      box-shadow: 0 0.5rem 0.2rem ${theme.colors.gray};
+      margin-bottom: 0.1rem;
+    `}
   `}
 `;
 

@@ -1,12 +1,8 @@
 import * as Styled from './styles';
 
-export type MenuProps = {
-  isOpen: boolean;
-};
-
-const Menu = ({ isOpen }: MenuProps) => {
+const Menu = () => {
   return (
-    <Styled.MenuWrapper isOpen={isOpen}>
+    <Styled.MenuWrapper>
       <Styled.LinkWrapper>Todas Categorias</Styled.LinkWrapper>
       <Styled.LinkWrapper>Enxoval Menina</Styled.LinkWrapper>
       <Styled.LinkWrapper>Enxoval Menino</Styled.LinkWrapper>

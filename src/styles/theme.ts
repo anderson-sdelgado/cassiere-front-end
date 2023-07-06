@@ -19,6 +19,7 @@ export default {
     purple: '#9556BF',
     normalBlue: '#4811BF',
     lightPurple: '#daa1ff',
+    outline: '#b5b5b54d',
   },
   font: {
     family: {

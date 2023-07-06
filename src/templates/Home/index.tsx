@@ -1,6 +1,8 @@
-import { Container } from '../../components/Container';
-import Header from '../../components/Header';
+import BannerSlider from '../../components/BannerSlider';
+import Base from '../Base';
 import * as Styled from './styles';
+
+import bannerMock from '../../components/BannerSlider/mock';
 
 export type HomeTemplateProps = {
   urlLogo: string;
@@ -9,11 +11,9 @@ export type HomeTemplateProps = {
 
 const Home = () => {
   return (
-    <Styled.Wrapper>
-      <Container>
-        <Header />
-      </Container>
-    </Styled.Wrapper>
+    <Base>
+      <BannerSlider items={bannerMock} />
+    </Base>
   );
 };
 
