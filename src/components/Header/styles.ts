@@ -40,7 +40,7 @@ export const FindWrapper = styled.div`
     & form {
       display: flex;
       flex-direction: row;
-      border: 1px solid grey;
+      border: 1px solid ${theme.colors.gray};
       padding: ${theme.spacings.xxsmall};
     }
 

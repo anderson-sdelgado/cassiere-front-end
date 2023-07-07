@@ -5,7 +5,7 @@ import { SliderSettings } from '../Slider';
 import BannerSlider from '.';
 import items from './mock';
 
-const settings: SliderSettings = {
+const setting: SliderSettings = {
   dots: true,
   infinite: true,
   speed: 500,
@@ -15,7 +15,12 @@ const settings: SliderSettings = {
 
 describe('<BannerSlider />', () => {
   it('should render', () => {
-    renderTheme(<BannerSlider items={items} settings={settings} />);
+    renderTheme(<BannerSlider items={items} settings={setting} />);
+    expect(screen.getByRole('img', { name: /teste 1/i })).toBeInTheDocument();
+  });
+
+  it('should render without settings', () => {
+    renderTheme(<BannerSlider items={items} />);
     expect(screen.getByRole('img', { name: /teste 1/i })).toBeInTheDocument();
   });
 });

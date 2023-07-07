@@ -7,7 +7,7 @@ describe('<Divider />', () => {
     expect(container.firstChild).toMatchInlineSnapshot(`
       .c0 {
         height: 0.1rem;
-        background: rgba(181,181,181,0.3);
+        background: #b5b5b54d;
         border: 0;
       }
 

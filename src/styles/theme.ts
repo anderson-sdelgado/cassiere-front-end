@@ -7,19 +7,16 @@ export default {
     radius: '0.4rem',
   },
   colors: {
-    primary: '#F231A5',
-    secondary: '#3CD3C1',
-    mainBg: '#06092B',
-    lightBg: '#F2F2F2',
     white: '#FFFFFF',
     black: '#030517',
     lightGray: '#fcfcfc',
     gray: '#8F8F8F',
     darkGray: '#2E2F42',
     purple: '#9556BF',
-    normalBlue: '#4811BF',
     lightPurple: '#daa1ff',
+    normalBlue: '#4811BF',
     outline: '#b5b5b54d',
+    lightGreen: '#CBD48C',
   },
   font: {
     family: {

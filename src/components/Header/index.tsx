@@ -11,7 +11,6 @@ import Logo from '../Logo';
 import MediaMatch from '../MediaMatch';
 import OptionHeader from '../OptionHeader';
 import Menu from '../Menu';
-import { Divider } from '../Divider';
 import { Container } from '../Container';
 
 export type HeaderProps = {
