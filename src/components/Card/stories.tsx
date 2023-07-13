@@ -15,14 +15,14 @@ export default {
 
 export const Default: StoryFn<CardProps> = (args) => {
   return (
-    <div style={{ width: '30rem' }}>
+    <div style={{ width: '30rem', margin: '0 auto' }}>
       <Card {...args} />
     </div>
   );
 };
 
 export const WithRibbon: StoryFn<CardProps> = (args) => (
-  <div style={{ width: '30rem' }}>
+  <div style={{ width: '30rem', margin: '0 auto' }}>
     <Card {...args} />
   </div>
 );

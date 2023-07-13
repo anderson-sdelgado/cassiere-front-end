@@ -1,5 +1,5 @@
 import { StoryFn, Meta } from '@storybook/react';
-import Header, { HeaderProps } from '.';
+import Header from '.';
 
 export default {
   title: 'Header',
@@ -14,12 +14,12 @@ export default {
   parameters: {
     layout: 'fullscreen',
   },
-} as Meta<HeaderProps>;
+} as Meta;
 
-export const Default: StoryFn<HeaderProps> = (args) => {
+export const Default: StoryFn = () => {
   return (
     <div>
-      <Header {...args} />
+      <Header />
     </div>
   );
 };

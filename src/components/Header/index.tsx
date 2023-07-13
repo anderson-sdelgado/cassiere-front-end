@@ -13,10 +13,7 @@ import OptionHeader from '../OptionHeader';
 import Menu from '../Menu';
 import { Container } from '../Container';
 
-export type HeaderProps = {
-  url: string;
-  alt: string;
-};
+import logoMock from '../Logo/mock';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,7 +27,7 @@ const Header = () => {
                 <MenuIcon aria-label="Open Menu" />
               </Styled.IconWrapper>
             </MediaMatch>
-            <Logo />
+            <Logo {...logoMock} />
             <MediaMatch lessThan="medium">
               <Styled.IconWrapper>
                 <ShoppingCartIcon aria-label="Cart" />
@@ -66,7 +63,7 @@ const Header = () => {
           <Styled.IconWrapper onClick={() => setIsOpen(false)}>
             <CloseIcon aria-label="Close Menu" />
           </Styled.IconWrapper>
-          <Logo />
+          <Logo {...logoMock} />
         </Styled.HeaderMenu>
         <Container>
           <Menu />

@@ -3,6 +3,7 @@ import media from 'styled-media-query';
 
 export const Wrapper = styled.article`
   ${({ theme }) => css`
+    cursor: pointer;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     border-radius: 1rem;
@@ -78,8 +79,8 @@ export const Info = styled.div``;
 
 export const Title = styled.h3`
   ${({ theme }) => css`
-    font-size: ${theme.font.sizes.small};
-    font-weight: 500;
+    font-size: ${theme.font.sizes.xmedium};
+    font-weight: 400;
   `}
 `;
 
@@ -106,13 +107,14 @@ const priceModifiers = {
     color: ${theme.colors.gray};
     text-decoration: line-through;
     margin-right: ${theme.spacings.xsmall};
+    font-size: ${theme.font.sizes.small};
   `,
 };
 
 export const Price = styled.div<PriceProps>`
   ${({ theme, isPromotional }) => css`
     display: inline-flex;
-    font-size: ${theme.font.sizes.small};
+    font-size: ${theme.font.sizes.medium};
     font-weight: ${theme.font.bold};
     align-items: center;
 
@@ -124,32 +126,38 @@ export const Price = styled.div<PriceProps>`
 export const BuyBox = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  align-items: stretch;
+  gap: 1rem;
   height: 0;
   opacity: 0;
   margin-top: 1rem;
 `;
 
 export const Quantity = styled.div`
-  border: 1px solid grey;
+  ${({ theme }) => css`
+    border: 1px solid grey;
+    flex-basis: 30%;
+    padding: 0.5rem;
 
-  & input {
-    width: 4.2rem;
-    height: 4.2rem;
-    float: left;
-    display: block;
-    padding: 0;
-    margin: 0;
-    padding-left: 2rem;
-    border: none;
-  }
+    & input {
+      width: 60%;
+      height: 100%;
+      float: left;
+      display: block;
+      border: none;
+      text-align: center;
+      font-size: ${theme.font.sizes.xmedium};
+    }
 
-  & input:focus {
-    outline: none;
-  }
+    & input:focus {
+      outline: none;
+    }
+  `}
 `;
 
 export const ButtonQuantity = styled.div`
+  width: 20%;
+  padding: 0.1rem;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -160,7 +168,8 @@ export const ButtonAdd = styled.button`
     padding: ${theme.font.sizes.xsmall};
     font-size: ${theme.font.sizes.small};
     font-weight: ${theme.font.bold};
-    background-color: ${theme.colors.lightGreen};
+    color: ${theme.colors.white};
+    background-color: ${theme.colors.green};
     border: 0.1rem solid ${theme.colors.gray};
     border-radius: 0.5rem;
     cursor: pointer;

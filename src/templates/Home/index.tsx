@@ -19,6 +19,9 @@ const Home = () => {
       <Container>
         <CardSlider items={cardMock} />
       </Container>
+      <Container>
+        <CardSlider items={cardMock} />
+      </Container>
     </Base>
   );
 };

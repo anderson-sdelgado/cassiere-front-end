@@ -13,14 +13,21 @@ const setting: SliderSettings = {
       breakpoint: 1375,
       settings: {
         arrows: true,
-        slidesToShow: 5,
+        slidesToShow: 4,
       },
     },
     {
       breakpoint: 1024,
       settings: {
         arrows: true,
-        slidesToShow: 4,
+        slidesToShow: 3,
+      },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: true,
+        slidesToShow: 3,
       },
     },
     {
@@ -50,6 +57,7 @@ export type CardSliderProps = {
 const CardSlider = ({ items, settings = setting }: CardSliderProps) => {
   return (
     <Styled.Wrapper>
+      <Styled.Heading>Mais Vendidas</Styled.Heading>
       <Slider settings={settings}>
         {items.map((item) => (
           <Card key={item.slug} {...item} />

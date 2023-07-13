@@ -8,25 +8,25 @@ export default [
   {
     slug: 'kit-berco-fofucho2',
     title: 'Kit Berço Fofucho 09 Peças - Coleção Gold',
-    img: 'img/kit.jpg',
+    img: 'img/bala.jpg',
     price: 'R$ 348,95',
   },
   {
     slug: 'kit-berco-fofucho3',
     title: 'Kit Berço Fofucho 09 Peças - Coleção Gold',
-    img: 'img/kit.jpg',
+    img: 'img/ninho.jpg',
     price: 'R$ 348,95',
   },
   {
     slug: 'kit-berco-fofucho4',
     title: 'Kit Berço Fofucho 09 Peças - Coleção Gold',
-    img: 'img/kit.jpg',
+    img: 'img/rolo.jpg',
     price: 'R$ 348,95',
   },
   {
     slug: 'kit-berco-fofucho5',
     title: 'Kit Berço Fofucho 09 Peças - Coleção Gold',
-    img: 'img/kit.jpg',
+    img: 'img/trocador.jpg',
     price: 'R$ 348,95',
   },
   {

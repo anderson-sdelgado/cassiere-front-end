@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Ribbon from '../Ribbon';
 import * as Styled from './styles';
 import { ArrowDropDown as ArrowDown } from '@styled-icons/material-outlined/ArrowDropDown';
@@ -12,6 +13,16 @@ export type CardProps = {
 };
 
 const Card = ({ slug, title, img, price, ribbon }: CardProps) => {
+  const [count, setCount] = useState(1);
+
+  const onAddCart = () => {
+    setCount(count + 1);
+  };
+
+  const onRemoveCart = () => {
+    count > 1 && setCount(count - 1);
+  };
+
   return (
     <Styled.Wrapper>
       {!!ribbon && <Ribbon>{ribbon}</Ribbon>}
@@ -24,10 +35,14 @@ const Card = ({ slug, title, img, price, ribbon }: CardProps) => {
         </Styled.Info>
         <Styled.BuyBox>
           <Styled.Quantity>
-            <input type="text" value="1" />
+            <input type="text" value={count} />
             <Styled.ButtonQuantity>
-              <ArrowUp size={20} />
-              <ArrowDown size={20} />
+              <ArrowUp size={20} aria-label="Add Cart" onClick={onAddCart} />
+              <ArrowDown
+                size={20}
+                aria-label="Remove Cart"
+                onClick={onRemoveCart}
+              />
             </Styled.ButtonQuantity>
           </Styled.Quantity>
           <Styled.ButtonAdd>Adicionar ao Carrinho</Styled.ButtonAdd>

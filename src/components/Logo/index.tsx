@@ -1,9 +1,14 @@
 import * as Styled from './styles';
 
-const Logo = () => {
+export type LogoProps = {
+  title: string;
+  img: string;
+};
+
+const Logo = ({ title, img }: LogoProps) => {
   return (
     <Styled.Wrapper>
-      <img src="img/logo.jpg" alt="Logo" aria-label="Logo" />
+      <img src={img} alt={title} aria-label={title} />
     </Styled.Wrapper>
   );
 };

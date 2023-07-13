@@ -17,6 +17,8 @@ export default {
     normalBlue: '#4811BF',
     outline: '#b5b5b54d',
     lightGreen: '#CBD48C',
+    green: '#9BA649',
+    dargGreen: '#8F9943',
   },
   font: {
     family: {
@@ -29,6 +31,7 @@ export default {
       xxsmall: '0.8rem',
       xsmall: '1.2rem',
       small: '1.6rem',
+      xmedium: '1.8rem',
       medium: '2.4rem',
       large: '3.2rem',
       xlarge: '4.0rem',

@@ -4,7 +4,7 @@ import Menu from '.';
 
 describe('<Menu />', () => {
   it('should render', () => {
-    renderTheme(<Menu isOpen={true} />);
+    renderTheme(<Menu />);
     expect(screen.getByText(/todas/i)).toBeInTheDocument();
   });
 });
